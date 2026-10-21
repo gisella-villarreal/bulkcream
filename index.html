@@ -1,319 +1,213 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rocotec | Future. Connected.</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
-<style>
-:root {
-  --bg-color: #f8fafc;
-  --primary: #207691;
-  --primary-dark: #124657;
-  --white: #ffffff;
-  --text-main: #1e293b;
-  --text-muted: #64748b;
-  --border: #e2e8f0;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
-body { background-color: #0f172a; color: var(--text-main); padding: 20px 0; display: flex; justify-content: center; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoción Sesión Nupcial</title>
+    <!-- Importar fuentes similares a la imagen -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-.main-container {
-  width: 100%;
-  max-width: 1200px;
-  background-color: var(--bg-color);
-  border-radius: 20px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-  overflow: hidden;
-}
+        body {
+            /* Fondo borroso general */
+            background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
 
-/* TOP BAR */
-.top-bar {
-  background: #0d1b2a;
-  color: #94a3b8;
-  font-size: 0.75rem;
-  padding: 8px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.top-bar-links { display: flex; gap: 20px; }
-.top-bar-links span { cursor: pointer; }
+        /* Capa para difuminar el fondo de la página */
+        .bg-blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.2);
+            z-index: 1;
+        }
 
-/* HEADER PRINCIPAL */
-header {
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  gap: 20px;
-}
-.logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.4rem; color: var(--text-main); }
-.logo i { color: var(--primary); font-size: 1.8rem; }
-.search-bar-wrap {
-  flex: 1;
-  max-width: 500px;
-  background: #f1f5f9;
-  border: 1px solid var(--border);
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  padding: 8px 15px;
-  gap: 10px;
-}
-.search-bar-wrap input { border: none; outline: none; width: 100%; background: transparent; font-size: 0.9rem; }
-.search-btn { background: var(--primary); color: white; border: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; }
-.header-actions { display: flex; align-items: center; gap: 20px; font-size: 0.85rem; font-weight: 600; color: var(--text-main); }
-.header-icon-badge { position: relative; font-size: 1.3rem; cursor: pointer; }
-.badge { position: absolute; top: -6px; right: -8px; background: var(--primary); color: white; font-size: 0.6rem; padding: 2px 5px; border-radius: 50%; font-weight: 700; }
+        .poster-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 600px;
+        }
 
-/* CATEGORIAS SECUNDARIAS */
-.sub-nav {
-  display: flex;
-  justify-content: space-around;
-  background: var(--white);
-  padding: 12px 20px;
-  border-bottom: 1px solid var(--border);
-  overflow-x: auto;
-  gap: 15px;
-}
-.sub-nav-item { display: flex; flex-direction: column; align-items: center; gap: 5px; cursor: pointer; min-width: 70px; }
-.sub-nav-icon { width: 45px; height: 45px; background: #f1f5f9; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--primary); }
-.sub-nav-item span { font-size: 0.7rem; font-weight: 700; color: var(--text-muted); }
+        .card {
+            background-color: #f4f3ef; /* Color crema similar a la imagen */
+            padding: 50px 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
 
-/* HERO BANNER */
-.hero-section {
-  margin: 25px 30px;
-  background: linear-gradient(135deg, #0d1b2a 0%, var(--primary) 100%);
-  border-radius: 20px;
-  padding: 40px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.hero-content h3 { font-size: 0.85rem; letter-spacing: 2px; opacity: 0.8; margin-bottom: 5px; }
-.hero-content h1 { font-size: 2.2rem; font-weight: 800; line-height: 1.15; margin-bottom: 12px; }
-.hero-content p { font-size: 0.9rem; opacity: 0.85; margin-bottom: 20px; max-width: 400px; }
-.hero-btn { background: var(--white); color: var(--primary-dark); border: none; padding: 10px 20px; border-radius: 30px; font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
-.hero-devices { font-size: 6rem; display: flex; gap: 15px; color: rgba(255,255,255,0.9); }
+        /* Decoraciones de las esquinas (marcadores de posición) */
+        .corner {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10,10 Q50,10 50,50 Q50,90 90,90" fill="none" stroke="%23e0ddcd" stroke-width="3"/></svg>'); /* Reemplazar con PNG de filigrana real */
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+        }
+        .top-left { top: 15px; left: 15px; }
+        .top-right { top: 15px; right: 15px; transform: scaleX(-1); }
+        .bottom-left { bottom: 15px; left: 15px; transform: scaleY(-1); }
+        .bottom-right { bottom: 15px; right: 15px; transform: scale(-1, -1); }
 
-/* SECCIONES DE PRODUCTOS */
-.section-box { padding: 0 30px 30px; }
-.section-header-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-.section-title { font-size: 1.2rem; font-weight: 800; color: var(--text-main); }
-.view-all-link { font-size: 0.85rem; font-weight: 700; color: var(--primary); cursor: pointer; display: flex; align-items: center; gap: 4px; }
+        /* Contenedor ovalado para la foto */
+        .oval-mask {
+            width: 85%;
+            margin: 0 auto;
+            aspect-ratio: 3 / 4.2;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+        }
 
-.products-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 15px; }
-.product-card { background: var(--white); border-radius: 14px; padding: 15px; border: 1px solid var(--border); position: relative; }
-.badge-tag { position: absolute; top: 10px; left: 10px; background: var(--primary); color: white; font-size: 0.5rem; padding: 3px 6px; border-radius: 4px; font-weight: 800; text-transform: uppercase; }
-.product-img { height: 130px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--primary); background: #f8fafc; border-radius: 10px; margin-bottom: 12px; }
-.product-name { font-size: 0.85rem; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
-.product-desc { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 8px; }
-.product-rating { font-size: 0.7rem; color: #f59e0b; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 3px; }
-.product-rating span { color: var(--text-muted); }
-.product-bottom { display: flex; justify-content: space-between; align-items: center; }
-.price { font-size: 0.95rem; font-weight: 800; color: var(--text-main); }
-.add-cart-btn { background: var(--primary); color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+        .oval-mask img.bg-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(1.1); /* Efecto blanco y negro */
+        }
 
-/* BANNERS DOBLES */
-.dual-banners { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 0 30px 30px; }
-.promo-card { background: linear-gradient(135deg, #0d1b2a 0%, var(--primary) 100%); border-radius: 16px; padding: 25px; color: white; display: flex; justify-content: space-between; align-items: center; }
-.promo-card h4 { font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; margin-bottom: 5px; }
-.promo-card h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; }
-.promo-card p { font-size: 0.75rem; opacity: 0.85; margin-bottom: 15px; }
-.promo-btn { background: white; color: var(--primary-dark); border: none; padding: 6px 14px; border-radius: 20px; font-weight: 800; font-size: 0.7rem; cursor: pointer; }
+        /* Contenido superpuesto sobre la foto */
+        .overlay-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+            /* Sutil degradado oscuro para que el texto resalte */
+            background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
+        }
 
-/* FOOTER */
-footer { background: #0b131d; color: #94a3b8; padding: 40px 30px 20px; font-size: 0.8rem; }
-.newsletter-box { background: linear-gradient(90deg, #0d1b2a, var(--primary-dark)); border-radius: 14px; padding: 25px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; color: white; }
-.newsletter-input { display: flex; gap: 10px; background: white; padding: 5px; border-radius: 30px; width: 350px; }
-.newsletter-input input { border: none; outline: none; padding: 5px 15px; width: 100%; }
-.subscribe-btn { background: var(--primary); color: white; border: none; padding: 8px 20px; border-radius: 20px; font-weight: 700; cursor: pointer; }
+        .subtitle {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        }
 
-.footer-grid { display: grid; grid-template-columns: repeat(4, 1fr) 1.5fr; gap: 30px; margin-bottom: 30px; }
-.footer-col h4 { color: white; font-size: 0.9rem; font-weight: 700; margin-bottom: 12px; }
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.footer-col ul li { cursor: pointer; }
-.footer-col ul li:hover { color: white; }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; }
-</style>
+        .title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            line-height: 0.9;
+            margin-bottom: 20px;
+            font-weight: 400;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        }
+
+        .swans-icon {
+            width: 80px;
+            margin-bottom: 20px;
+            filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.5));
+        }
+
+        .discount {
+            font-size: 1rem;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        }
+
+        .discount strong {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .legal {
+            font-size: 0.65rem;
+            font-weight: 300;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Textos exteriores (Footer) */
+        .poster-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            color: #ffffff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .footer-left { text-align: left; }
+        .footer-right { text-align: right; }
+        .footer-light { font-weight: 300; font-style: italic; }
+
+        @media (max-width: 500px) {
+            .title { font-size: 3rem; }
+            .card { padding: 30px 20px; }
+        }
+    </style>
 </head>
 <body>
+    <div class="bg-blur"></div>
+    
+    <div class="poster-container">
+        <div class="card">
+            <!-- Esquinas ornamentales -->
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
 
-<div class="main-container">
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <div>Free Shipping on All Orders Over $50 | Easy Returns</div>
-    <div class="top-bar-links">
-      <span>PKR</span>
-      <span>Help</span>
-      <span>Track Order</span>
-    </div>
-  </div>
+            <!-- Centro Ovalado -->
+            <div class="oval-mask">
+                <!-- Reemplaza el src con la foto de tus clientes -->
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pareja abrazándose" class="bg-photo">
+                
+                <div class="overlay-content">
+                    <p class="subtitle">Disfruta de una</p>
+                    <h1 class="title">Sesión de<br>fotos nupcial</h1>
+                    
+                    <!-- Icono de cisnes. Reemplazar con el SVG o PNG exacto si lo tienes -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Swan_icon_white.svg" alt="Cisnes" class="swans-icon">
+                    
+                    <p class="discount">AL <strong>50%</strong> DE DESCUENTO</p>
+                    <p class="legal">*Válido por tiempo limitado</p>
+                </div>
+            </div>
+        </div>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <i class="ph-fill ph-lightning"></i>
-      <span>ROCOTEC</span>
+        <!-- Textos inferiores fuera de la tarjeta -->
+        <div class="poster-footer">
+            <div class="footer-left">
+                Promoción boda<br>
+                <span class="footer-light">Enero 2035</span>
+            </div>
+            <div class="footer-right">
+                Silvana Ochoa Fotografía<br>
+                <span class="footer-light">@sitioincreible</span>
+            </div>
+        </div>
     </div>
-    <div class="search-bar-wrap">
-      <i class="ph ph-magnifying-glass" style="color: var(--text-muted);"></i>
-      <input type="text" placeholder="Search for products, brands or more...">
-      <button class="search-btn"><i class="ph ph-arrow-right"></i></button>
-    </div>
-    <div class="header-actions">
-      <div style="display: flex; align-items: center; gap: 6px; cursor: pointer;"><i class="ph ph-user"><span>Sign In</span></i></div>
-      <div class="header-icon-badge"><i class="ph ph-heart"></i><span class="badge">2</span></div>
-      <div class="header-icon-badge"><i class="ph ph-shopping-cart"></i><span class="badge">3</span></div>
-    </div>
-  </header>
-
-  <!-- SUB NAV CATEGORIAS -->
-  <div class="sub-nav">
-    <div class="sub-nav-item"><div class="sub-nav-icon"><i class="ph-fill ph-house"></i></div><span>Hogar</span></div>
-    <div class="sub-nav-item"><div class="sub-nav-icon"><i class="ph-fill ph-car"></i></div><span>Carro</span></div>
-    <div class="sub-nav-item"><div class="sub-nav-icon"><i class="ph-fill ph-devices"></i></div><span>Gadgets</span></div>
-    <div class="sub-nav-item"><div class="sub-nav-icon"><i class="ph-fill ph-game-controller"></i></div><span>Juguetes</span></div>
-    <div class="sub-nav-item"><div class="sub-nav-icon"><i class="ph-fill ph-watch"></i></div><span>Wearables</span></div>
-    <div class="sub-nav-item"><div class="sub-nav-icon"><i class="ph-fill ph-camera"></i></div><span>Cámaras</span></div>
-  </div>
-
-  <!-- HERO BANNER -->
-  <div class="hero-section">
-    <div class="hero-content">
-      <h3>NEXT GEN TECH</h3>
-      <h1>A Smarter Tomorrow Starts Here</h1>
-      <p>Explore the latest connected devices. Upgrade your lifestyle with cutting-edge tech.</p>
-      <button class="hero-btn">Shop the Future <i class="ph ph-arrow-right"></i></button>
-    </div>
-    <div class="hero-devices">
-      <i class="ph-fill ph-laptop"></i>
-      <i class="ph-fill ph-device-mobile"></i>
-    </div>
-  </div>
-
-  <!-- TRENDING PRODUCTS -->
-  <div class="section-box">
-    <div class="section-header-bar">
-      <h2 class="section-title">Trending Electronics</h2>
-      <span class="view-all-link">View All <i class="ph ph-caret-right"></i></span>
-    </div>
-    <div class="products-row">
-      <div class="product-card">
-        <span class="badge-tag">BESTSELLER</span>
-        <div class="product-img"><i class="ph-fill ph-headset"></i></div>
-        <div class="product-name">Wireless Headphones</div>
-        <div class="product-desc">Active Noise Cancelling</div>
-        <div class="product-rating"><i class="ph-fill ph-star"></i> 4.8 <span>(1.2K)</span></div>
-        <div class="product-bottom"><span class="price">$129.99</span><button class="add-cart-btn"><i class="ph ph-plus"></i></button></div>
-      </div>
-      <div class="product-card">
-        <span class="badge-tag" style="background: #0d1b2a;">TRENDING</span>
-        <div class="product-img"><i class="ph-fill ph-projector-screen"></i></div>
-        <div class="product-name">Smart 4K Projector</div>
-        <div class="product-desc">Cinematic home experience</div>
-        <div class="product-rating"><i class="ph-fill ph-star"></i> 4.7 <span>(968)</span></div>
-        <div class="product-bottom"><span class="price">$159.99</span><button class="add-cart-btn"><i class="ph ph-plus"></i></button></div>
-      </div>
-      <div class="product-card">
-        <span class="badge-tag" style="background: var(--primary-dark);">POPULAR</span>
-        <div class="product-img"><i class="ph-fill ph-watch"></i></div>
-        <div class="product-name">MagSafe Charging Stand</div>
-        <div class="product-desc">3-in-1 Fast Wireless Station</div>
-        <div class="product-rating"><i class="ph-fill ph-star"></i> 4.6 <span>(743)</span></div>
-        <div class="product-bottom"><span class="price">$49.99</span><button class="add-cart-btn"><i class="ph ph-plus"></i></button></div>
-      </div>
-      <div class="product-card">
-        <span class="badge-tag">NEW</span>
-        <div class="product-img"><i class="ph-fill ph-game-controller"></i></div>
-        <div class="product-name">NovaPlay Controller</div>
-        <div class="product-desc">Pro gaming bluetooth pad</div>
-        <div class="product-rating"><i class="ph-fill ph-star"></i> 4.9 <span>(512)</span></div>
-        <div class="product-bottom"><span class="price">$59.99</span><button class="add-cart-btn"><i class="ph ph-plus"></i></button></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- DUAL PROMO BANNERS -->
-  <div class="dual-banners">
-    <div class="promo-card">
-      <div>
-        <h4>FLASH OFFERS</h4>
-        <h2>UPGRADE YOUR SETUP</h2>
-        <p>Top tech. Lower prices. Hurry, limited time only!</p>
-        <button class="promo-btn">Shop Now</button>
-      </div>
-      <i class="ph-fill ph-lightning" style="font-size: 3.5rem; opacity: 0.8;"></i>
-    </div>
-    <div class="promo-card" style="background: linear-gradient(135deg, #1b3a4b 0%, #207691 100%);">
-      <div>
-        <h4>NEW ARRIVALS</h4>
-        <h2>SMART GADGETS</h2>
-        <p>Be the first to experience what's next in connectivity.</p>
-        <button class="promo-btn">Explore Now</button>
-      </div>
-      <i class="ph-fill ph-cpu" style="font-size: 3.5rem; opacity: 0.8;"></i>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="newsletter-box">
-      <div>
-        <h3 style="color: white; margin-bottom: 4px;">Join Rocotec+</h3>
-        <p style="font-size: 0.75rem; opacity: 0.8;">Get exclusive deals, early access to new launches & recommendations.</p>
-      </div>
-      <div class="newsletter-input">
-        <input type="email" placeholder="Enter your email address">
-        <button class="subscribe-btn">Subscribe</button>
-      </div>
-    </div>
-
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <ul>
-          <li>All Products</li>
-          <li>New Arrivals</li>
-          <li>Best Sellers</li>
-          <li>Deals</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Support</h4>
-        <ul>
-          <li>Track Order</li>
-          <li>Returns & Refunds</li>
-          <li>Help Center</li>
-          <li>Contact Us</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>About</h4>
-        <ul>
-          <li>Our Story</li>
-          <li>Sustainability</li>
-          <li>Careers</li>
-          <li>Press</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Download Our App</h4>
-        <p style="margin-bottom: 10px; font-size: 0.7rem;">Shop on the go</p>
-        <div style="display: flex; gap: 8px;"><span style="background: #1e293b; padding: 6px 12px; border-radius: 6px; cursor: pointer;">Google Play</span></div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div>© 2026 Rocotec. All rights reserved.</div>
-      <div>Secure Shopping • SSL Protected</div>
-    </div>
-  </footer>
-</div>
-
 </body>
 </html>
