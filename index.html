@@ -7,7 +7,6 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Se mantiene Inter para los textos y se añade Montserrat para darle un toque más deportivo y de impacto -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -17,18 +16,17 @@
             theme: {
                 extend: {
                     colors: {
-                        'brand-black': '#000000',     // Fondo principal negro
-                        'brand-dark': '#121212',      // Negro alternativo para secciones
-                        'brand-yellow': '#FACC15',    // Amarillo complementario
-                        'brand-yellow-hover': '#EAB308', // Amarillo para hover
-                        'brand-text': '#FFFFFF',      // Letras blancas
+                        'brand-black': '#000000',     
+                        'brand-dark': '#121212',      
+                        'brand-yellow': '#FACC15',    
+                        'brand-yellow-hover': '#EAB308', 
+                        'brand-text': '#FFFFFF',      
                     },
                     fontFamily: {
                         'sans': ['"Inter"', 'sans-serif'],
                         'impact': ['"Montserrat"', 'sans-serif'],
                     },
                     boxShadow: {
-                        // Sombra de botones de color amarillo transparente solicitado
                         'yellow-glow': '0 4px 14px 0 rgba(250, 204, 21, 0.4)',
                         'yellow-glow-lg': '0 10px 25px -3px rgba(250, 204, 21, 0.45)',
                     }
@@ -44,30 +42,26 @@
         <!-- HEADER / INICIO -->
         <header class="relative w-full h-[520px] flex flex-col justify-end text-center pb-8">
             
-            <!-- Hero Background Image (Adaptada con la imagen adjunta image_0.png) -->
+            <!-- Hero Background Image (Actualizada al archivo local) -->
             <div class="absolute inset-0 z-0 overflow-hidden">
-                <img src="1793305837849.jpg" 
+                <img src="1793308669606.jpg" 
                      alt="Portada Bulkcream" 
                      class="w-full h-full object-cover object-[62%_center] scale-100">
-                     <!-- En el entorno final, se reemplaza la URL anterior por la ruta o URL pública de image_0.png para cambiar la imagen de portada -->
             </div>
             
-            <!-- Gradient Blend Overlay (Degradado que funde la foto con el fondo negro) -->
+            <!-- Gradient Blend Overlay -->
             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-black via-brand-black/70 to-transparent z-10 h-[55%]"></div>
 
             <!-- Hero Text Content -->
             <div class="relative z-20 px-5 mt-auto">
-                <!-- Título: BULKCREAM -->
                 <h1 class="font-impact text-4xl md:text-5xl font-black leading-none mb-3 text-brand-text tracking-tighter uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                     BULKCREAM
                 </h1>
                 
-                <!-- Subtítulo principal: PREMIUM CARBS FOR MASSIVE GAINS (Amarillo y en negrita) -->
                 <p class="font-impact text-sm md:text-[15px] tracking-widest font-extrabold text-brand-yellow uppercase mb-3 drop-shadow-[0_2px_3px_rgba(0,0,0,0.9)]">
                     PREMIUM CARBS FOR MASSIVE GAINS
                 </p>
                 
-                <!-- Subtítulo secundario: Nutrición para un mejor rendimiento... (Blanco en letra normal) -->
                 <p class="font-sans text-xs md:text-sm font-medium text-brand-text/90 max-w-[320px] mx-auto mb-2 leading-relaxed drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
                     Nutrición para un mejor rendimiento.
                 </p>
@@ -81,17 +75,14 @@
         <!-- SECCIÓN DE BOTONES / SERVICIOS -->
         <section class="relative z-10 px-6 py-4 flex flex-col gap-4">
             
-            <!-- Primer Botón: COMPRA BULKCREAM (Redirige a WhatsApp) -->
+            <!-- Primer Botón: COMPRA BULKCREAM -->
             <a href="https://wa.me/573137697484?text=Hola,%20quiero%20comprar%20Bulkcream" 
                target="_blank"
                class="group relative w-full min-h-[6.8rem] rounded-xl overflow-hidden shadow-yellow-glow hover:shadow-yellow-glow-lg transition-all hover:-translate-y-0.5 block border border-brand-yellow/30 bg-zinc-950">
-                <!-- Imagen de fondo oscura de entreno/gimnasio -->
                 <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
-                <!-- Superposición para unificar el color y oscurecer -->
                 <div class="absolute inset-0 bg-brand-black/85 group-hover:bg-brand-black/75 transition-colors"></div>
                 <div class="relative h-full px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-4">
-                        <!-- Icono con detalles en amarillo -->
                         <div class="w-11 h-11 shrink-0 rounded-full flex items-center justify-center bg-brand-yellow/10 text-brand-yellow border border-brand-yellow/30">
                             <i class="fa-solid fa-cart-shopping text-lg"></i>
                         </div>
@@ -100,16 +91,13 @@
                             <span class="font-sans text-[10px] font-medium text-brand-yellow mt-0.5 uppercase tracking-wider">Haz tu pedido aquí</span>
                         </div>
                     </div>
-                    <!-- Icono de acción -->
                     <i class="fa-solid fa-arrow-right text-brand-text/50 group-hover:text-brand-yellow transition-colors text-sm shrink-0"></i>
                 </div>
             </a>
 
-            <!-- Segundo Botón: Descargar recetas e ideas de preparación gratis -->
+            <!-- Segundo Botón: Descargar recetas (Fondo plato de crema/avena) -->
             <a href="#" class="group relative w-full min-h-[6.8rem] rounded-xl overflow-hidden shadow-yellow-glow hover:shadow-yellow-glow-lg transition-all hover:-translate-y-0.5 block border border-brand-yellow/30 bg-zinc-950">
-                <!-- Imagen de fondo que muestra el recetario de avena/arroz (Referencia image_1.png) -->
-                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
-                <!-- Superposición para unificar con la estética de marca -->
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517673400267-0251440c45dc?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
                 <div class="absolute inset-0 bg-brand-black/85 group-hover:bg-brand-black/75 transition-colors"></div>
                 <div class="relative h-full px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-4">
@@ -125,12 +113,11 @@
                 </div>
             </a>
 
-            <!-- Tercer Botón: CONTÁCTANOS POR WHATSAPP (Redirige a WhatsApp) -->
+            <!-- Tercer Botón: CONTÁCTANOS POR WHATSAPP (Fondo mano con celular) -->
             <a href="https://wa.me/573137697484?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20Bulkcream" 
                target="_blank"
                class="group relative w-full min-h-[6.8rem] rounded-xl overflow-hidden shadow-yellow-glow hover:shadow-yellow-glow-lg transition-all hover:-translate-y-0.5 block border border-brand-yellow/30 bg-zinc-950">
-                <!-- Imagen de fondo de atención al cliente -->
-                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
                 <div class="absolute inset-0 bg-brand-black/85 group-hover:bg-brand-black/75 transition-colors"></div>
                 <div class="relative h-full px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-4">
@@ -151,15 +138,13 @@
         <section class="mt-8 mb-6 mx-4 bg-zinc-950 text-brand-text px-6 pt-10 pb-12 relative z-10 rounded-[2.5rem] border border-zinc-900 shadow-xl">
             
             <div class="flex flex-col items-center text-center mb-6">
-                <!-- Foto de producto/Perfil (Reemplazada por el detalle de la crema de arroz) -->
+                <!-- Foto de producto/Perfil (Actualizada al archivo local) -->
                 <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-brand-yellow/60 shadow-yellow-glow mb-4 bg-zinc-900 flex items-center justify-center">
-                    <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&q=80&w=400" alt="Bulkcream" class="w-full h-full object-cover">
+                    <img src="1793305837849.jpg" alt="Conoce Bulkcream" class="w-full h-full object-cover">
                 </div>
                 
-                <!-- Título modificado a CONOCE BULKCREAM -->
                 <h2 class="font-impact text-3xl font-black text-brand-yellow mb-4 uppercase tracking-tight">CONOCE BULKCREAM</h2>
                 
-                <!-- Contenido adaptado -->
                 <p class="font-sans text-[15px] font-semibold leading-relaxed text-brand-text mb-3">
                     Tu esfuerzo merece una buena base.
                 </p>
@@ -169,14 +154,12 @@
                 </p>
             </div>
             
-            <!-- Botón interno adaptado de compra -->
             <a href="https://wa.me/573137697484?text=Hola,%20quiero%20comprar%20Bulkcream" 
                target="_blank"
                class="inline-flex justify-center items-center w-full gap-2 px-6 py-4 rounded-xl bg-brand-yellow hover:bg-brand-yellow-hover transition-colors text-brand-black text-sm font-extrabold tracking-wider text-center shadow-yellow-glow uppercase">
                 COMPRA AQUÍ <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
             </a>
             
-            <!-- Subtexto adaptado -->
             <p class="text-center text-[10px] md:text-[11px] font-extrabold mt-5 text-brand-yellow uppercase tracking-widest">
                 Energía Natural · Alto Rendimiento · Preparación Rápida
             </p>
@@ -187,7 +170,6 @@
             
             <div class="mb-10 text-center">
                 <h2 class="font-impact text-3xl font-black text-brand-yellow mb-8 uppercase tracking-tight">Contacto</h2>
-                <!-- Iconos de Redes Sociales -->
                 <div class="flex justify-center gap-5">
                     <a href="https://wa.me/573137697484" aria-label="WhatsApp" class="w-12 h-12 rounded-full border border-brand-yellow/30 flex items-center justify-center hover:bg-brand-yellow hover:border-brand-yellow hover:text-brand-black transition-all shadow-sm text-brand-yellow">
                         <i class="fa-brands fa-whatsapp text-xl"></i>
@@ -198,7 +180,6 @@
                 </div>
             </div>
 
-            <!-- Copyright y Firma -->
             <div class="pt-8 relative border-t border-zinc-900">
                 <h4 class="font-impact text-2xl font-black mb-3 text-brand-yellow uppercase tracking-tight">BULKCREAM</h4>
                 <p class="text-[10px] font-sans font-light text-zinc-500 tracking-widest uppercase leading-relaxed">
@@ -210,5 +191,4 @@
     </main>
 
 </body>
-                                </html>
-                                
+</html>
