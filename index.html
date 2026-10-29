@@ -40,17 +40,17 @@
     <main class="max-w-[430px] mx-auto bg-brand-black min-h-screen relative overflow-hidden shadow-2xl flex flex-col border-x border-zinc-900">
         
         <!-- HEADER / INICIO -->
-        <header class="relative w-full h-[440px] flex flex-col justify-end text-center pb-4 pt-4">
+        <header class="relative w-full h-[540px] flex flex-col justify-end text-center pb-8 pt-4">
             
-            <!-- Hero Background Image -->
+            <!-- Hero Background Image (Ajustada a object-cover para pantalla completa y centrada arriba) -->
             <div class="absolute inset-0 z-0 overflow-hidden bg-brand-black">
-                <img src="1793310967747~2.jpg" 
+                <img src="1793310176030.jpg" 
                      alt="Portada Bulkcream" 
-                     class="w-full h-full object-contain object-top scale-100">
+                     class="w-full h-full object-cover object-top scale-100">
             </div>
             
-            <!-- Gradient Blend Overlay -->
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-black via-brand-black/90 to-transparent z-10 h-[50%]"></div>
+            <!-- Gradient Blend Overlay (Reducido para que solo oscurezca la zona de los textos y no tape el producto) -->
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-black via-brand-black/80 to-transparent z-10 h-[50%]"></div>
 
             <!-- Hero Text Content -->
             <div class="relative z-20 px-5 mt-auto">
@@ -75,61 +75,61 @@
         <!-- SECCIÓN DE BOTONES / SERVICIOS -->
         <section class="relative z-10 px-6 py-4 flex flex-col gap-4">
             
-            <!-- Primer Botón: COMPRA BULKCREAM -->
+            <!-- Primer Botón: COMPRA BULKCREAM (Capa negra al 60% para que se vea la imagen) -->
             <a href="https://wa.me/573137697484?text=Hola,%20quiero%20comprar%20Bulkcream" 
                target="_blank"
                class="group relative w-full min-h-[6.8rem] rounded-xl overflow-hidden shadow-yellow-glow hover:shadow-yellow-glow-lg transition-all hover:-translate-y-0.5 block border border-brand-yellow/30 bg-zinc-950">
                 <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
-                <div class="absolute inset-0 bg-brand-black/85 group-hover:bg-brand-black/75 transition-colors"></div>
+                <div class="absolute inset-0 bg-brand-black/60 group-hover:bg-brand-black/50 transition-colors"></div>
                 <div class="relative h-full px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-4">
-                        <div class="w-11 h-11 shrink-0 rounded-full flex items-center justify-center bg-brand-yellow/10 text-brand-yellow border border-brand-yellow/30">
+                        <div class="w-11 h-11 shrink-0 rounded-full flex items-center justify-center bg-brand-yellow/10 text-brand-yellow border border-brand-yellow/30 backdrop-blur-sm">
                             <i class="fa-solid fa-cart-shopping text-lg"></i>
                         </div>
-                        <div class="flex flex-col">
+                        <div class="flex flex-col drop-shadow-md">
                             <span class="font-impact text-[1.1rem] leading-tight font-black tracking-wide text-brand-text uppercase">COMPRA BULKCREAM</span>
                             <span class="font-sans text-[10px] font-medium text-brand-yellow mt-0.5 uppercase tracking-wider">Haz tu pedido aquí</span>
                         </div>
                     </div>
-                    <i class="fa-solid fa-arrow-right text-brand-text/50 group-hover:text-brand-yellow transition-colors text-sm shrink-0"></i>
+                    <i class="fa-solid fa-arrow-right text-brand-text/70 group-hover:text-brand-yellow transition-colors text-sm shrink-0"></i>
                 </div>
             </a>
 
-            <!-- Segundo Botón: Descargar recetas (Con enlace PDF) -->
+            <!-- Segundo Botón: Descargar recetas (Capa negra al 60%) -->
             <a href="BULKCREAM_en_tu_cocina_12_meriendas.docx_20261029_145427_0000.pdf" download="Recetas_Bulkcream.pdf" class="group relative w-full min-h-[6.8rem] rounded-xl overflow-hidden shadow-yellow-glow hover:shadow-yellow-glow-lg transition-all hover:-translate-y-0.5 block border border-brand-yellow/30 bg-zinc-950">
                 <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-151767400267-0251440c45dc?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
-                <div class="absolute inset-0 bg-brand-black/85 group-hover:bg-brand-black/75 transition-colors"></div>
+                <div class="absolute inset-0 bg-brand-black/60 group-hover:bg-brand-black/50 transition-colors"></div>
                 <div class="relative h-full px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-4">
-                        <div class="w-11 h-11 shrink-0 rounded-full flex items-center justify-center bg-brand-yellow/10 text-brand-yellow border border-brand-yellow/30">
+                        <div class="w-11 h-11 shrink-0 rounded-full flex items-center justify-center bg-brand-yellow/10 text-brand-yellow border border-brand-yellow/30 backdrop-blur-sm">
                             <i class="fa-solid fa-book-open text-lg"></i>
                         </div>
-                        <div class="flex flex-col">
+                        <div class="flex flex-col drop-shadow-md">
                             <span class="font-impact text-[1.1rem] leading-tight font-black tracking-wide text-brand-text uppercase">Descargar recetas</span>
-                            <span class="font-sans text-[10px] font-medium text-zinc-400 mt-0.5 uppercase tracking-wider leading-none">e ideas de preparación gratis</span>
+                            <span class="font-sans text-[10px] font-medium text-zinc-300 mt-0.5 uppercase tracking-wider leading-none">e ideas de preparación gratis</span>
                         </div>
                     </div>
-                    <i class="fa-solid fa-download text-brand-text/50 group-hover:text-brand-yellow transition-colors text-sm shrink-0"></i>
+                    <i class="fa-solid fa-download text-brand-text/70 group-hover:text-brand-yellow transition-colors text-sm shrink-0"></i>
                 </div>
             </a>
 
-            <!-- Tercer Botón: CONTÁCTANOS POR WHATSAPP -->
+            <!-- Tercer Botón: CONTÁCTANOS POR WHATSAPP (Capa negra al 60%) -->
             <a href="https://wa.me/573137697484?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20Bulkcream" 
                target="_blank"
                class="group relative w-full min-h-[6.8rem] rounded-xl overflow-hidden shadow-yellow-glow hover:shadow-yellow-glow-lg transition-all hover:-translate-y-0.5 block border border-brand-yellow/30 bg-zinc-950">
                 <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
-                <div class="absolute inset-0 bg-brand-black/85 group-hover:bg-brand-black/75 transition-colors"></div>
+                <div class="absolute inset-0 bg-brand-black/60 group-hover:bg-brand-black/50 transition-colors"></div>
                 <div class="relative h-full px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-4">
-                        <div class="w-11 h-11 shrink-0 rounded-full flex items-center justify-center bg-brand-yellow/10 text-brand-yellow border border-brand-yellow/30">
+                        <div class="w-11 h-11 shrink-0 rounded-full flex items-center justify-center bg-brand-yellow/10 text-brand-yellow border border-brand-yellow/30 backdrop-blur-sm">
                             <i class="fa-brands fa-whatsapp text-xl"></i>
                         </div>
-                        <div class="flex flex-col">
+                        <div class="flex flex-col drop-shadow-md">
                             <span class="font-impact text-[1.05rem] leading-tight font-black tracking-wide text-brand-text uppercase">CONTÁCTANOS POR WHATSAPP</span>
                             <span class="font-sans text-[10px] font-medium text-brand-yellow mt-0.5 uppercase tracking-wider">Atención directa</span>
                         </div>
                     </div>
-                    <i class="fa-solid fa-arrow-right text-brand-text/50 group-hover:text-brand-yellow transition-colors text-sm shrink-0"></i>
+                    <i class="fa-solid fa-arrow-right text-brand-text/70 group-hover:text-brand-yellow transition-colors text-sm shrink-0"></i>
                 </div>
             </a>
         </section>
@@ -191,5 +191,4 @@
     </main>
 
 </body>
-    </html>
-    
+</html>
