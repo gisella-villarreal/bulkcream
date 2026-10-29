@@ -39,21 +39,20 @@
 
     <main class="max-w-[430px] mx-auto bg-brand-black min-h-screen relative overflow-hidden shadow-2xl flex flex-col border-x border-zinc-900">
         
-        <!-- HEADER / INICIO -->
-        <header class="relative w-full h-[540px] flex flex-col justify-end text-center pb-8 pt-4">
+        <!-- HEADER / INICIO (Estructura separada para no tapar el producto) -->
+        <header class="relative w-full flex flex-col text-center">
             
-            <!-- Hero Background Image (Ajustada a object-cover para pantalla completa y centrada arriba) -->
-            <div class="absolute inset-0 z-0 overflow-hidden bg-brand-black">
+            <!-- Contenedor de la foto -->
+            <div class="relative w-full h-[400px]">
                 <img src="1793310176030.jpg" 
                      alt="Portada Bulkcream" 
                      class="w-full h-full object-cover object-top scale-100">
+                <!-- Degradado inferior para fundir con el bloque de texto negro -->
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-black via-brand-black/90 to-transparent z-10 h-20"></div>
             </div>
-            
-            <!-- Gradient Blend Overlay (Reducido para que solo oscurezca la zona de los textos y no tape el producto) -->
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-black via-brand-black/80 to-transparent z-10 h-[50%]"></div>
 
-            <!-- Hero Text Content -->
-            <div class="relative z-20 px-5 mt-auto">
+            <!-- Contenedor del texto (Debajo de la foto) -->
+            <div class="relative z-20 px-5 pt-1 pb-6 bg-brand-black">
                 <h1 class="font-impact text-4xl md:text-5xl font-black leading-none mb-2 text-brand-text tracking-tighter uppercase drop-shadow-[0_3px_5px_rgba(0,0,0,1)]">
                     BULKCREAM
                 </h1>
@@ -73,14 +72,14 @@
         </header>
 
         <!-- SECCIÓN DE BOTONES / SERVICIOS -->
-        <section class="relative z-10 px-6 py-4 flex flex-col gap-4">
+        <section class="relative z-10 px-6 py-2 flex flex-col gap-4">
             
-            <!-- Primer Botón: COMPRA BULKCREAM (Capa negra al 60% para que se vea la imagen) -->
+            <!-- Primer Botón: COMPRA BULKCREAM (Opacidad 75%) -->
             <a href="https://wa.me/573137697484?text=Hola,%20quiero%20comprar%20Bulkcream" 
                target="_blank"
                class="group relative w-full min-h-[6.8rem] rounded-xl overflow-hidden shadow-yellow-glow hover:shadow-yellow-glow-lg transition-all hover:-translate-y-0.5 block border border-brand-yellow/30 bg-zinc-950">
                 <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
-                <div class="absolute inset-0 bg-brand-black/60 group-hover:bg-brand-black/50 transition-colors"></div>
+                <div class="absolute inset-0 bg-brand-black/75 group-hover:bg-brand-black/65 transition-colors"></div>
                 <div class="relative h-full px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-4">
                         <div class="w-11 h-11 shrink-0 rounded-full flex items-center justify-center bg-brand-yellow/10 text-brand-yellow border border-brand-yellow/30 backdrop-blur-sm">
@@ -95,10 +94,11 @@
                 </div>
             </a>
 
-            <!-- Segundo Botón: Descargar recetas (Capa negra al 60%) -->
+            <!-- Segundo Botón: Descargar recetas (Opacidad 75% e imagen corregida plato de crema/avena) -->
             <a href="BULKCREAM_en_tu_cocina_12_meriendas.docx_20261029_145427_0000.pdf" download="Recetas_Bulkcream.pdf" class="group relative w-full min-h-[6.8rem] rounded-xl overflow-hidden shadow-yellow-glow hover:shadow-yellow-glow-lg transition-all hover:-translate-y-0.5 block border border-brand-yellow/30 bg-zinc-950">
-                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-151767400267-0251440c45dc?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
-                <div class="absolute inset-0 bg-brand-black/60 group-hover:bg-brand-black/50 transition-colors"></div>
+                <!-- Imagen actualizada y funcional -->
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1586201375761-83865001e8ac?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-brand-black/75 group-hover:bg-brand-black/65 transition-colors"></div>
                 <div class="relative h-full px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-4">
                         <div class="w-11 h-11 shrink-0 rounded-full flex items-center justify-center bg-brand-yellow/10 text-brand-yellow border border-brand-yellow/30 backdrop-blur-sm">
@@ -113,12 +113,12 @@
                 </div>
             </a>
 
-            <!-- Tercer Botón: CONTÁCTANOS POR WHATSAPP (Capa negra al 60%) -->
+            <!-- Tercer Botón: CONTÁCTANOS POR WHATSAPP (Opacidad 75%) -->
             <a href="https://wa.me/573137697484?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20Bulkcream" 
                target="_blank"
                class="group relative w-full min-h-[6.8rem] rounded-xl overflow-hidden shadow-yellow-glow hover:shadow-yellow-glow-lg transition-all hover:-translate-y-0.5 block border border-brand-yellow/30 bg-zinc-950">
                 <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
-                <div class="absolute inset-0 bg-brand-black/60 group-hover:bg-brand-black/50 transition-colors"></div>
+                <div class="absolute inset-0 bg-brand-black/75 group-hover:bg-brand-black/65 transition-colors"></div>
                 <div class="relative h-full px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-4">
                         <div class="w-11 h-11 shrink-0 rounded-full flex items-center justify-center bg-brand-yellow/10 text-brand-yellow border border-brand-yellow/30 backdrop-blur-sm">
