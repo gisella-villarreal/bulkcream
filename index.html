@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maricela Ávila - Psicóloga y Especialista en Talento Humano</title>
+    <title>BULKCREAM - Premium Carbs For Massive Gains</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <!-- Se mantiene Inter para los textos y se añade Montserrat para darle un toque más deportivo y de impacto -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,162 +17,192 @@
             theme: {
                 extend: {
                     colors: {
-                        'peach': '#F0E0D0',       // Naranja suave/durazno pálido (Fondo)
-                        'sage': '#A9B7A0',        // Salvia
-                        'dark-green': '#343B35',  // Verde oscuro
-                        'golden-sand': '#C9AD8A', // Arena dorada
+                        'brand-black': '#000000',     // Fondo principal negro
+                        'brand-dark': '#121212',      // Negro alternativo para secciones
+                        'brand-yellow': '#FACC15',    // Amarillo complementario
+                        'brand-yellow-hover': '#EAB308', // Amarillo para hover
+                        'brand-text': '#FFFFFF',      // Letras blancas
                     },
                     fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
                         'sans': ['"Inter"', 'sans-serif'],
-                        'cursive': ['"Great Vibes"', 'cursive'],
+                        'impact': ['"Montserrat"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        // Sombra de botones de color amarillo transparente solicitado
+                        'yellow-glow': '0 4px 14px 0 rgba(250, 204, 21, 0.4)',
+                        'yellow-glow-lg': '0 10px 25px -3px rgba(250, 204, 21, 0.45)',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-gray-100 antialiased text-dark-green selection:bg-golden-sand selection:text-dark-green">
+<body class="bg-[#0b0b0b] antialiased text-brand-text selection:bg-brand-yellow selection:text-brand-black">
 
-    <main class="max-w-[430px] mx-auto bg-peach min-h-screen relative overflow-hidden shadow-2xl flex flex-col">
+    <main class="max-w-[430px] mx-auto bg-brand-black min-h-screen relative overflow-hidden shadow-2xl flex flex-col border-x border-zinc-900">
         
-        <header class="relative w-full h-[450px] md:h-[500px] flex flex-col justify-end text-center pb-8">
+        <!-- HEADER / INICIO -->
+        <header class="relative w-full h-[520px] flex flex-col justify-end text-center pb-8">
             
-            <!-- Hero Background Image -->
+            <!-- Hero Background Image (Adaptada con la imagen adjunta image_0.png) -->
             <div class="absolute inset-0 z-0 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" 
-                     alt="Maricela Ávila" 
-                     class="w-full h-full object-cover object-[center_15%] scale-[1.15]">
+                <img src="1793305837849.jpg" 
+                     alt="Portada Bulkcream" 
+                     class="w-full h-full object-cover object-[62%_center] scale-100">
+                     <!-- En el entorno final, se reemplaza la URL anterior por la ruta o URL pública de image_0.png para cambiar la imagen de portada -->
             </div>
             
-            <!-- Gradient Blend Overlay (Fades to background color) -->
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-peach via-peach/60 to-transparent z-10 h-[45%]"></div>
+            <!-- Gradient Blend Overlay (Degradado que funde la foto con el fondo negro) -->
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-black via-brand-black/70 to-transparent z-10 h-[55%]"></div>
 
             <!-- Hero Text Content -->
-            <div class="relative z-20 px-4 mt-auto">
-                <h1 class="font-serif text-4xl md:text-5xl font-medium leading-tight mb-1 text-dark-green tracking-wide drop-shadow-sm">
-                    Maricela Ávila
+            <div class="relative z-20 px-5 mt-auto">
+                <!-- Título: BULKCREAM -->
+                <h1 class="font-impact text-4xl md:text-5xl font-black leading-none mb-3 text-brand-text tracking-tighter uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    BULKCREAM
                 </h1>
-                <!-- Strictly one line using whitespace-nowrap and adjusted text sizes -->
-                <p class="font-sans text-[11px] sm:text-xs md:text-sm tracking-widest font-semibold text-dark-green/80 uppercase whitespace-nowrap overflow-hidden text-ellipsis">
-                    Psicóloga | Especialista en Talento Humano
+                
+                <!-- Subtítulo principal: PREMIUM CARBS FOR MASSIVE GAINS (Amarillo y en negrita) -->
+                <p class="font-impact text-sm md:text-[15px] tracking-widest font-extrabold text-brand-yellow uppercase mb-3 drop-shadow-[0_2px_3px_rgba(0,0,0,0.9)]">
+                    PREMIUM CARBS FOR MASSIVE GAINS
+                </p>
+                
+                <!-- Subtítulo secundario: Nutrición para un mejor rendimiento... (Blanco en letra normal) -->
+                <p class="font-sans text-xs md:text-sm font-medium text-brand-text/90 max-w-[320px] mx-auto mb-2 leading-relaxed drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                    Nutrición para un mejor rendimiento.
+                </p>
+                
+                <p class="font-sans text-[11px] md:text-xs font-light text-zinc-300 max-w-[290px] mx-auto leading-relaxed drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                    Crema de arroz para acompañar tu rutina, tus entrenamientos y tus recetas favoritas.
                 </p>
             </div>
         </header>
 
-        <section class="relative z-10 px-6 py-4 flex flex-col gap-3">
+        <!-- SECCIÓN DE BOTONES / SERVICIOS -->
+        <section class="relative z-10 px-6 py-4 flex flex-col gap-4">
             
-            <!-- Service 1 -->
-            <a href="#" class="group relative w-full min-h-[6.5rem] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 block border border-dark-green/10">
-                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
-                <div class="absolute inset-0 bg-dark-green/85 group-hover:bg-dark-green/75 transition-colors"></div>
-                <div class="relative h-full px-5 py-4 flex items-center justify-between text-peach">
+            <!-- Primer Botón: COMPRA BULKCREAM (Redirige a WhatsApp) -->
+            <a href="https://wa.me/573137697484?text=Hola,%20quiero%20comprar%20Bulkcream" 
+               target="_blank"
+               class="group relative w-full min-h-[6.8rem] rounded-xl overflow-hidden shadow-yellow-glow hover:shadow-yellow-glow-lg transition-all hover:-translate-y-0.5 block border border-brand-yellow/30 bg-zinc-950">
+                <!-- Imagen de fondo oscura de entreno/gimnasio -->
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
+                <!-- Superposición para unificar el color y oscurecer -->
+                <div class="absolute inset-0 bg-brand-black/85 group-hover:bg-brand-black/75 transition-colors"></div>
+                <div class="relative h-full px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 shrink-0 rounded-full flex items-center justify-center bg-peach/10 text-golden-sand backdrop-blur-sm border border-peach/20">
-                            <i class="fa-solid fa-user-check text-lg"></i>
-                        </div>
-                        <span class="font-serif text-[1.1rem] leading-tight font-medium tracking-wide pr-2">Selección y evaluación<br>de talento</span>
-                    </div>
-                    <i class="fa-solid fa-arrow-right text-peach/50 group-hover:text-golden-sand transition-colors text-sm shrink-0"></i>
-                </div>
-            </a>
-
-            <!-- Service 2 -->
-            <a href="#" class="group relative w-full min-h-[6.5rem] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 block border border-dark-green/10">
-                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
-                <div class="absolute inset-0 bg-dark-green/85 group-hover:bg-dark-green/75 transition-colors"></div>
-                <div class="relative h-full px-5 py-4 flex items-center justify-between text-peach">
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 shrink-0 rounded-full flex items-center justify-center bg-peach/10 text-golden-sand backdrop-blur-sm border border-peach/20">
-                            <i class="fa-regular fa-face-smile text-lg"></i>
+                        <!-- Icono con detalles en amarillo -->
+                        <div class="w-11 h-11 shrink-0 rounded-full flex items-center justify-center bg-brand-yellow/10 text-brand-yellow border border-brand-yellow/30">
+                            <i class="fa-solid fa-cart-shopping text-lg"></i>
                         </div>
                         <div class="flex flex-col">
-                            <span class="font-serif text-[1.1rem] leading-tight font-medium tracking-wide">Bienestar y clima laboral</span>
-                            <span class="font-sans text-[10px] font-medium text-sage mt-1 uppercase tracking-widest">Iniciativas</span>
+                            <span class="font-impact text-[1.1rem] leading-tight font-black tracking-wide text-brand-text uppercase">COMPRA BULKCREAM</span>
+                            <span class="font-sans text-[10px] font-medium text-brand-yellow mt-0.5 uppercase tracking-wider">Haz tu pedido aquí</span>
                         </div>
                     </div>
-                    <i class="fa-solid fa-arrow-right text-peach/50 group-hover:text-golden-sand transition-colors text-sm shrink-0"></i>
+                    <!-- Icono de acción -->
+                    <i class="fa-solid fa-arrow-right text-brand-text/50 group-hover:text-brand-yellow transition-colors text-sm shrink-0"></i>
                 </div>
             </a>
 
-            <!-- Service 3 -->
-            <a href="#" class="group relative w-full min-h-[6.5rem] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 block border border-dark-green/10">
-                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
-                <div class="absolute inset-0 bg-dark-green/85 group-hover:bg-dark-green/75 transition-colors"></div>
-                <div class="relative h-full px-5 py-4 flex items-center justify-between text-peach">
+            <!-- Segundo Botón: Descargar recetas e ideas de preparación gratis -->
+            <a href="#" class="group relative w-full min-h-[6.8rem] rounded-xl overflow-hidden shadow-yellow-glow hover:shadow-yellow-glow-lg transition-all hover:-translate-y-0.5 block border border-brand-yellow/30 bg-zinc-950">
+                <!-- Imagen de fondo que muestra el recetario de avena/arroz (Referencia image_1.png) -->
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
+                <!-- Superposición para unificar con la estética de marca -->
+                <div class="absolute inset-0 bg-brand-black/85 group-hover:bg-brand-black/75 transition-colors"></div>
+                <div class="relative h-full px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 shrink-0 rounded-full flex items-center justify-center bg-peach/10 text-golden-sand backdrop-blur-sm border border-peach/20">
-                            <i class="fa-solid fa-chalkboard-user text-lg"></i>
-                        </div>
-                        <span class="font-serif text-[1.1rem] leading-tight font-medium tracking-wide pr-2">Capacitaciones y<br>desarrollo</span>
-                    </div>
-                    <i class="fa-solid fa-arrow-right text-peach/50 group-hover:text-golden-sand transition-colors text-sm shrink-0"></i>
-                </div>
-            </a>
-
-            <!-- Service 4 -->
-            <a href="#" class="group relative w-full min-h-[6.5rem] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 block border border-dark-green/10">
-                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
-                <div class="absolute inset-0 bg-dark-green/85 group-hover:bg-dark-green/75 transition-colors"></div>
-                <div class="relative h-full px-5 py-4 flex items-center justify-between text-peach">
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 shrink-0 rounded-full flex items-center justify-center bg-peach/10 text-golden-sand backdrop-blur-sm border border-peach/20">
-                            <i class="fa-regular fa-compass text-lg"></i>
+                        <div class="w-11 h-11 shrink-0 rounded-full flex items-center justify-center bg-brand-yellow/10 text-brand-yellow border border-brand-yellow/30">
+                            <i class="fa-solid fa-book-open text-lg"></i>
                         </div>
                         <div class="flex flex-col">
-                            <span class="font-serif text-[1.1rem] leading-tight font-medium tracking-wide">Orientación y desarrollo profesional</span>
-                            <span class="font-sans text-[10px] font-medium text-sage mt-1 uppercase tracking-widest">Acompañamiento</span>
+                            <span class="font-impact text-[1.1rem] leading-tight font-black tracking-wide text-brand-text uppercase">Descargar recetas</span>
+                            <span class="font-sans text-[10px] font-medium text-zinc-400 mt-0.5 uppercase tracking-wider leading-none">e ideas de preparación gratis</span>
                         </div>
                     </div>
-                    <i class="fa-solid fa-arrow-right text-peach/50 group-hover:text-golden-sand transition-colors text-sm shrink-0"></i>
+                    <i class="fa-solid fa-download text-brand-text/50 group-hover:text-brand-yellow transition-colors text-sm shrink-0"></i>
+                </div>
+            </a>
+
+            <!-- Tercer Botón: CONTÁCTANOS POR WHATSAPP (Redirige a WhatsApp) -->
+            <a href="https://wa.me/573137697484?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20Bulkcream" 
+               target="_blank"
+               class="group relative w-full min-h-[6.8rem] rounded-xl overflow-hidden shadow-yellow-glow hover:shadow-yellow-glow-lg transition-all hover:-translate-y-0.5 block border border-brand-yellow/30 bg-zinc-950">
+                <!-- Imagen de fondo de atención al cliente -->
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-brand-black/85 group-hover:bg-brand-black/75 transition-colors"></div>
+                <div class="relative h-full px-5 py-4 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-11 h-11 shrink-0 rounded-full flex items-center justify-center bg-brand-yellow/10 text-brand-yellow border border-brand-yellow/30">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-impact text-[1.05rem] leading-tight font-black tracking-wide text-brand-text uppercase">CONTÁCTANOS POR WHATSAPP</span>
+                            <span class="font-sans text-[10px] font-medium text-brand-yellow mt-0.5 uppercase tracking-wider">Atención directa</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-brand-text/50 group-hover:text-brand-yellow transition-colors text-sm shrink-0"></i>
                 </div>
             </a>
         </section>
 
-        <section class="mt-8 mb-6 mx-4 bg-dark-green text-peach px-6 pt-10 pb-12 relative z-10 rounded-[2.5rem] shadow-xl">
+        <!-- SECCIÓN SOBRE MÍ / CONOCE BULKCREAM -->
+        <section class="mt-8 mb-6 mx-4 bg-zinc-950 text-brand-text px-6 pt-10 pb-12 relative z-10 rounded-[2.5rem] border border-zinc-900 shadow-xl">
             
             <div class="flex flex-col items-center text-center mb-6">
-                <!-- Circular Photo -->
-                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-golden-sand/50 shadow-lg mb-4">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" alt="Maricela Ávila Perfil" class="w-full h-full object-cover object-top">
+                <!-- Foto de producto/Perfil (Reemplazada por el detalle de la crema de arroz) -->
+                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-brand-yellow/60 shadow-yellow-glow mb-4 bg-zinc-900 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&q=80&w=400" alt="Bulkcream" class="w-full h-full object-cover">
                 </div>
-                <h2 class="font-serif text-3xl text-golden-sand mb-3">Sobre mí</h2>
-                <p class="font-sans text-[15px] font-light leading-relaxed text-peach/90">
-                    Acompaño a empresas y profesionales a desarrollar su potencial, fortalecer sus equipos y construir experiencias laborales más humanas.
+                
+                <!-- Título modificado a CONOCE BULKCREAM -->
+                <h2 class="font-impact text-3xl font-black text-brand-yellow mb-4 uppercase tracking-tight">CONOCE BULKCREAM</h2>
+                
+                <!-- Contenido adaptado -->
+                <p class="font-sans text-[15px] font-semibold leading-relaxed text-brand-text mb-3">
+                    Tu esfuerzo merece una buena base.
+                </p>
+                <p class="font-sans text-[13.5px] font-light leading-relaxed text-zinc-300">
+                    Creemos en la constancia, la alimentación y los pequeños hábitos que acompañan tus grandes objetivos.<br><br>
+                    Practicidad para tu rutina. Versatilidad para tu cocina. Carbohidratos para acompañar tus metas.
                 </p>
             </div>
             
-            <a href="#" class="inline-flex justify-center items-center w-full gap-2 px-6 py-4 rounded-xl bg-golden-sand hover:bg-[#b89b78] transition-colors text-dark-green text-sm font-semibold tracking-wide text-center shadow-md">
-                HABLEMOS DE TU OBJETIVO <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+            <!-- Botón interno adaptado de compra -->
+            <a href="https://wa.me/573137697484?text=Hola,%20quiero%20comprar%20Bulkcream" 
+               target="_blank"
+               class="inline-flex justify-center items-center w-full gap-2 px-6 py-4 rounded-xl bg-brand-yellow hover:bg-brand-yellow-hover transition-colors text-brand-black text-sm font-extrabold tracking-wider text-center shadow-yellow-glow uppercase">
+                COMPRA AQUÍ <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
             </a>
-            <p class="text-center text-[10px] md:text-[11px] font-medium mt-5 text-sage uppercase tracking-widest">
-                Consultoría · Talento humano · Desarrollo profesional
+            
+            <!-- Subtexto adaptado -->
+            <p class="text-center text-[10px] md:text-[11px] font-extrabold mt-5 text-brand-yellow uppercase tracking-widest">
+                Energía Natural · Alto Rendimiento · Preparación Rápida
             </p>
         </section>
 
-        <footer class="bg-dark-green text-peach px-8 pt-16 pb-12 text-center relative z-10 flex-grow flex flex-col justify-between">
+        <!-- FOOTER / CONTACTO -->
+        <footer class="bg-zinc-950 text-brand-text px-8 pt-16 pb-12 text-center relative z-10 flex-grow flex flex-col justify-between border-t border-zinc-900">
             
             <div class="mb-10 text-center">
-                <h2 class="font-serif text-3xl text-golden-sand mb-8">Contacto</h2>
-                <!-- Social Icons -->
+                <h2 class="font-impact text-3xl font-black text-brand-yellow mb-8 uppercase tracking-tight">Contacto</h2>
+                <!-- Iconos de Redes Sociales -->
                 <div class="flex justify-center gap-5">
-                    <a href="#" aria-label="WhatsApp" class="w-12 h-12 rounded-full border border-peach/20 flex items-center justify-center hover:bg-golden-sand hover:border-golden-sand hover:text-dark-green transition-all shadow-sm">
+                    <a href="https://wa.me/573137697484" aria-label="WhatsApp" class="w-12 h-12 rounded-full border border-brand-yellow/30 flex items-center justify-center hover:bg-brand-yellow hover:border-brand-yellow hover:text-brand-black transition-all shadow-sm text-brand-yellow">
                         <i class="fa-brands fa-whatsapp text-xl"></i>
                     </a>
-                    <a href="#" aria-label="Instagram" class="w-12 h-12 rounded-full border border-peach/20 flex items-center justify-center hover:bg-golden-sand hover:border-golden-sand hover:text-dark-green transition-all shadow-sm">
+                    <a href="#" aria-label="Instagram" class="w-12 h-12 rounded-full border border-zinc-800 flex items-center justify-center hover:bg-brand-yellow hover:border-brand-yellow hover:text-brand-black transition-all shadow-sm text-zinc-400">
                         <i class="fa-brands fa-instagram text-xl"></i>
-                    </a>
-                    <a href="#" aria-label="LinkedIn" class="w-12 h-12 rounded-full border border-peach/20 flex items-center justify-center hover:bg-golden-sand hover:border-golden-sand hover:text-dark-green transition-all shadow-sm">
-                        <i class="fa-brands fa-linkedin-in text-xl"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Copyright and Signature -->
-            <div class="pt-8 relative border-t border-peach/10">
-                <h4 class="font-serif text-[2.2rem] font-medium mb-4 text-golden-sand">Maricela Ávila</h4>
-                <p class="text-[11px] font-sans font-light text-peach/50 tracking-widest uppercase leading-relaxed">
-                    © 2027 | Todos los derechos reservados
+            <!-- Copyright y Firma -->
+            <div class="pt-8 relative border-t border-zinc-900">
+                <h4 class="font-impact text-2xl font-black mb-3 text-brand-yellow uppercase tracking-tight">BULKCREAM</h4>
+                <p class="text-[10px] font-sans font-light text-zinc-500 tracking-widest uppercase leading-relaxed">
+                    © 2026 | Todos los derechos reservados
                 </p>
             </div>
         </footer>
@@ -179,4 +210,5 @@
     </main>
 
 </body>
-                        </html>
+                                </html>
+                                
