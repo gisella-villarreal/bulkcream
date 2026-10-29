@@ -40,33 +40,34 @@
     <main class="max-w-[430px] mx-auto bg-brand-black min-h-screen relative overflow-hidden shadow-2xl flex flex-col border-x border-zinc-900">
         
         <!-- HEADER / INICIO -->
-        <header class="relative w-full h-[520px] flex flex-col justify-end text-center pb-8">
+        <!-- Se bajó la altura a 440px para que la imagen quepa perfectamente con su proporción de origen -->
+        <header class="relative w-full h-[440px] flex flex-col justify-end text-center pb-4 pt-4">
             
-            <!-- Hero Background Image (Actualizada al archivo local) -->
-            <div class="absolute inset-0 z-0 overflow-hidden">
+            <!-- Hero Background Image (Ajustada con object-contain para mostrarla 100% completa) -->
+            <div class="absolute inset-0 z-0 overflow-hidden bg-brand-black">
                 <img src="1793310176030.jpg" 
                      alt="Portada Bulkcream" 
-                     class="w-full h-full object-cover object-[62%_center] scale-100">
+                     class="w-full h-full object-contain object-top scale-100">
             </div>
             
-            <!-- Gradient Blend Overlay -->
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-black via-brand-black/70 to-transparent z-10 h-[55%]"></div>
+            <!-- Gradient Blend Overlay (Degradado que sube desde el fondo negro para fundirse sin tapar el producto) -->
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-black via-brand-black/90 to-transparent z-10 h-[50%]"></div>
 
             <!-- Hero Text Content -->
             <div class="relative z-20 px-5 mt-auto">
-                <h1 class="font-impact text-4xl md:text-5xl font-black leading-none mb-3 text-brand-text tracking-tighter uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                <h1 class="font-impact text-4xl md:text-5xl font-black leading-none mb-2 text-brand-text tracking-tighter uppercase drop-shadow-[0_3px_5px_rgba(0,0,0,1)]">
                     BULKCREAM
                 </h1>
                 
-                <p class="font-impact text-sm md:text-[15px] tracking-widest font-extrabold text-brand-yellow uppercase mb-3 drop-shadow-[0_2px_3px_rgba(0,0,0,0.9)]">
+                <p class="font-impact text-sm md:text-[15px] tracking-widest font-extrabold text-brand-yellow uppercase mb-2 drop-shadow-[0_3px_5px_rgba(0,0,0,1)]">
                     PREMIUM CARBS FOR MASSIVE GAINS
                 </p>
                 
-                <p class="font-sans text-xs md:text-sm font-medium text-brand-text/90 max-w-[320px] mx-auto mb-2 leading-relaxed drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                <p class="font-sans text-xs md:text-sm font-medium text-brand-text/90 max-w-[320px] mx-auto mb-1 leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
                     Nutrición para un mejor rendimiento.
                 </p>
                 
-                <p class="font-sans text-[11px] md:text-xs font-light text-zinc-300 max-w-[290px] mx-auto leading-relaxed drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                <p class="font-sans text-[11px] md:text-xs font-light text-zinc-300 max-w-[290px] mx-auto leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
                     Crema de arroz para acompañar tu rutina, tus entrenamientos y tus recetas favoritas.
                 </p>
             </div>
@@ -95,9 +96,9 @@
                 </div>
             </a>
 
-            <!-- Segundo Botón: Descargar recetas (Fondo plato de crema/avena) -->
+            <!-- Segundo Botón: Descargar recetas (Fondo plato de crema/avena de arroz) -->
             <a href="#" class="group relative w-full min-h-[6.8rem] rounded-xl overflow-hidden shadow-yellow-glow hover:shadow-yellow-glow-lg transition-all hover:-translate-y-0.5 block border border-brand-yellow/30 bg-zinc-950">
-                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517673400267-0251440c45dc?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-151767400267-0251440c45dc?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
                 <div class="absolute inset-0 bg-brand-black/85 group-hover:bg-brand-black/75 transition-colors"></div>
                 <div class="relative h-full px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-4">
@@ -138,9 +139,9 @@
         <section class="mt-8 mb-6 mx-4 bg-zinc-950 text-brand-text px-6 pt-10 pb-12 relative z-10 rounded-[2.5rem] border border-zinc-900 shadow-xl">
             
             <div class="flex flex-col items-center text-center mb-6">
-                <!-- Foto de producto/Perfil (Actualizada al archivo local) -->
+                <!-- Foto de producto/Perfil (Actualizada al archivo local para Conoce Bulkcream) -->
                 <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-brand-yellow/60 shadow-yellow-glow mb-4 bg-zinc-900 flex items-center justify-center">
-                    <img src="1790886276490.jpg" alt="Conoce Bulkcream" class="w-full h-full object-cover">
+                    <img src="1793305837849.jpg" alt="Conoce Bulkcream" class="w-full h-full object-cover">
                 </div>
                 
                 <h2 class="font-impact text-3xl font-black text-brand-yellow mb-4 uppercase tracking-tight">CONOCE BULKCREAM</h2>
