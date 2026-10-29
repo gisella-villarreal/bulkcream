@@ -3,211 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promoción Sesión Nupcial</title>
-    <!-- Importar fuentes similares a la imagen -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            /* Fondo borroso general */
-            background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            font-family: 'Montserrat', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-            position: relative;
-        }
-
-        /* Capa para difuminar el fondo de la página */
-        .bg-blur {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(8px);
-            background-color: rgba(255, 255, 255, 0.2);
-            z-index: 1;
-        }
-
-        .poster-container {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            max-width: 600px;
-        }
-
-        .card {
-            background-color: #f4f3ef; /* Color crema similar a la imagen */
-            padding: 50px 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Decoraciones de las esquinas (marcadores de posición) */
-        .corner {
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10,10 Q50,10 50,50 Q50,90 90,90" fill="none" stroke="%23e0ddcd" stroke-width="3"/></svg>'); /* Reemplazar con PNG de filigrana real */
-            background-size: contain;
-            background-repeat: no-repeat;
-            opacity: 0.8;
-        }
-        .top-left { top: 15px; left: 15px; }
-        .top-right { top: 15px; right: 15px; transform: scaleX(-1); }
-        .bottom-left { bottom: 15px; left: 15px; transform: scaleY(-1); }
-        .bottom-right { bottom: 15px; right: 15px; transform: scale(-1, -1); }
-
-        /* Contenedor ovalado para la foto */
-        .oval-mask {
-            width: 85%;
-            margin: 0 auto;
-            aspect-ratio: 3 / 4.2;
-            border-radius: 50%;
-            overflow: hidden;
-            position: relative;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
-        }
-
-        .oval-mask img.bg-photo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(100%) contrast(1.1); /* Efecto blanco y negro */
-        }
-
-        /* Contenido superpuesto sobre la foto */
-        .overlay-content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #ffffff;
-            padding: 20px;
-            /* Sutil degradado oscuro para que el texto resalte */
-            background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
-        }
-
-        .subtitle {
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-        }
-
-        .title {
-            font-family: 'Great Vibes', cursive;
-            font-size: 4rem;
-            line-height: 0.9;
-            margin-bottom: 20px;
-            font-weight: 400;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-        }
-
-        .swans-icon {
-            width: 80px;
-            margin-bottom: 20px;
-            filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.5));
-        }
-
-        .discount {
-            font-size: 1rem;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-        }
-
-        .discount strong {
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .legal {
-            font-size: 0.65rem;
-            font-weight: 300;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-        }
-
-        /* Textos exteriores (Footer) */
-        .poster-footer {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 15px;
-            color: #ffffff;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-            font-size: 0.85rem;
-            line-height: 1.4;
-        }
-
-        .footer-left { text-align: left; }
-        .footer-right { text-align: right; }
-        .footer-light { font-weight: 300; font-style: italic; }
-
-        @media (max-width: 500px) {
-            .title { font-size: 3rem; }
-            .card { padding: 30px 20px; }
-        }
-    </style>
-</head>
-<body>
-    <div class="bg-blur"></div>
+    <title>Maricela Ávila - Psicóloga y Especialista en Talento Humano</title>
     
-    <div class="poster-container">
-        <div class="card">
-            <!-- Esquinas ornamentales -->
-            <div class="corner top-left"></div>
-            <div class="corner top-right"></div>
-            <div class="corner bottom-left"></div>
-            <div class="corner bottom-right"></div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'peach': '#F0E0D0',       // Naranja suave/durazno pálido (Fondo)
+                        'sage': '#A9B7A0',        // Salvia
+                        'dark-green': '#343B35',  // Verde oscuro
+                        'golden-sand': '#C9AD8A', // Arena dorada
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                        'cursive': ['"Great Vibes"', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 antialiased text-dark-green selection:bg-golden-sand selection:text-dark-green">
 
-            <!-- Centro Ovalado -->
-            <div class="oval-mask">
-                <!-- Reemplaza el src con la foto de tus clientes -->
-                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pareja abrazándose" class="bg-photo">
-                
-                <div class="overlay-content">
-                    <p class="subtitle">Disfruta de una</p>
-                    <h1 class="title">Sesión de<br>fotos nupcial</h1>
-                    
-                    <!-- Icono de cisnes. Reemplazar con el SVG o PNG exacto si lo tienes -->
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Swan_icon_white.svg" alt="Cisnes" class="swans-icon">
-                    
-                    <p class="discount">AL <strong>50%</strong> DE DESCUENTO</p>
-                    <p class="legal">*Válido por tiempo limitado</p>
+    <main class="max-w-[430px] mx-auto bg-peach min-h-screen relative overflow-hidden shadow-2xl flex flex-col">
+        
+        <header class="relative w-full h-[450px] md:h-[500px] flex flex-col justify-end text-center pb-8">
+            
+            <!-- Hero Background Image -->
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" 
+                     alt="Maricela Ávila" 
+                     class="w-full h-full object-cover object-[center_15%] scale-[1.15]">
+            </div>
+            
+            <!-- Gradient Blend Overlay (Fades to background color) -->
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-peach via-peach/60 to-transparent z-10 h-[45%]"></div>
+
+            <!-- Hero Text Content -->
+            <div class="relative z-20 px-4 mt-auto">
+                <h1 class="font-serif text-4xl md:text-5xl font-medium leading-tight mb-1 text-dark-green tracking-wide drop-shadow-sm">
+                    Maricela Ávila
+                </h1>
+                <!-- Strictly one line using whitespace-nowrap and adjusted text sizes -->
+                <p class="font-sans text-[11px] sm:text-xs md:text-sm tracking-widest font-semibold text-dark-green/80 uppercase whitespace-nowrap overflow-hidden text-ellipsis">
+                    Psicóloga | Especialista en Talento Humano
+                </p>
+            </div>
+        </header>
+
+        <section class="relative z-10 px-6 py-4 flex flex-col gap-3">
+            
+            <!-- Service 1 -->
+            <a href="#" class="group relative w-full min-h-[6.5rem] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 block border border-dark-green/10">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-dark-green/85 group-hover:bg-dark-green/75 transition-colors"></div>
+                <div class="relative h-full px-5 py-4 flex items-center justify-between text-peach">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 shrink-0 rounded-full flex items-center justify-center bg-peach/10 text-golden-sand backdrop-blur-sm border border-peach/20">
+                            <i class="fa-solid fa-user-check text-lg"></i>
+                        </div>
+                        <span class="font-serif text-[1.1rem] leading-tight font-medium tracking-wide pr-2">Selección y evaluación<br>de talento</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-peach/50 group-hover:text-golden-sand transition-colors text-sm shrink-0"></i>
+                </div>
+            </a>
+
+            <!-- Service 2 -->
+            <a href="#" class="group relative w-full min-h-[6.5rem] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 block border border-dark-green/10">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-dark-green/85 group-hover:bg-dark-green/75 transition-colors"></div>
+                <div class="relative h-full px-5 py-4 flex items-center justify-between text-peach">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 shrink-0 rounded-full flex items-center justify-center bg-peach/10 text-golden-sand backdrop-blur-sm border border-peach/20">
+                            <i class="fa-regular fa-face-smile text-lg"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-[1.1rem] leading-tight font-medium tracking-wide">Bienestar y clima laboral</span>
+                            <span class="font-sans text-[10px] font-medium text-sage mt-1 uppercase tracking-widest">Iniciativas</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-peach/50 group-hover:text-golden-sand transition-colors text-sm shrink-0"></i>
+                </div>
+            </a>
+
+            <!-- Service 3 -->
+            <a href="#" class="group relative w-full min-h-[6.5rem] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 block border border-dark-green/10">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-dark-green/85 group-hover:bg-dark-green/75 transition-colors"></div>
+                <div class="relative h-full px-5 py-4 flex items-center justify-between text-peach">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 shrink-0 rounded-full flex items-center justify-center bg-peach/10 text-golden-sand backdrop-blur-sm border border-peach/20">
+                            <i class="fa-solid fa-chalkboard-user text-lg"></i>
+                        </div>
+                        <span class="font-serif text-[1.1rem] leading-tight font-medium tracking-wide pr-2">Capacitaciones y<br>desarrollo</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-peach/50 group-hover:text-golden-sand transition-colors text-sm shrink-0"></i>
+                </div>
+            </a>
+
+            <!-- Service 4 -->
+            <a href="#" class="group relative w-full min-h-[6.5rem] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 block border border-dark-green/10">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-dark-green/85 group-hover:bg-dark-green/75 transition-colors"></div>
+                <div class="relative h-full px-5 py-4 flex items-center justify-between text-peach">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 shrink-0 rounded-full flex items-center justify-center bg-peach/10 text-golden-sand backdrop-blur-sm border border-peach/20">
+                            <i class="fa-regular fa-compass text-lg"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-[1.1rem] leading-tight font-medium tracking-wide">Orientación y desarrollo profesional</span>
+                            <span class="font-sans text-[10px] font-medium text-sage mt-1 uppercase tracking-widest">Acompañamiento</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-peach/50 group-hover:text-golden-sand transition-colors text-sm shrink-0"></i>
+                </div>
+            </a>
+        </section>
+
+        <section class="mt-8 mb-6 mx-4 bg-dark-green text-peach px-6 pt-10 pb-12 relative z-10 rounded-[2.5rem] shadow-xl">
+            
+            <div class="flex flex-col items-center text-center mb-6">
+                <!-- Circular Photo -->
+                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-golden-sand/50 shadow-lg mb-4">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" alt="Maricela Ávila Perfil" class="w-full h-full object-cover object-top">
+                </div>
+                <h2 class="font-serif text-3xl text-golden-sand mb-3">Sobre mí</h2>
+                <p class="font-sans text-[15px] font-light leading-relaxed text-peach/90">
+                    Acompaño a empresas y profesionales a desarrollar su potencial, fortalecer sus equipos y construir experiencias laborales más humanas.
+                </p>
+            </div>
+            
+            <a href="#" class="inline-flex justify-center items-center w-full gap-2 px-6 py-4 rounded-xl bg-golden-sand hover:bg-[#b89b78] transition-colors text-dark-green text-sm font-semibold tracking-wide text-center shadow-md">
+                HABLEMOS DE TU OBJETIVO <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+            </a>
+            <p class="text-center text-[10px] md:text-[11px] font-medium mt-5 text-sage uppercase tracking-widest">
+                Consultoría · Talento humano · Desarrollo profesional
+            </p>
+        </section>
+
+        <footer class="bg-dark-green text-peach px-8 pt-16 pb-12 text-center relative z-10 flex-grow flex flex-col justify-between">
+            
+            <div class="mb-10 text-center">
+                <h2 class="font-serif text-3xl text-golden-sand mb-8">Contacto</h2>
+                <!-- Social Icons -->
+                <div class="flex justify-center gap-5">
+                    <a href="#" aria-label="WhatsApp" class="w-12 h-12 rounded-full border border-peach/20 flex items-center justify-center hover:bg-golden-sand hover:border-golden-sand hover:text-dark-green transition-all shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="w-12 h-12 rounded-full border border-peach/20 flex items-center justify-center hover:bg-golden-sand hover:border-golden-sand hover:text-dark-green transition-all shadow-sm">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="w-12 h-12 rounded-full border border-peach/20 flex items-center justify-center hover:bg-golden-sand hover:border-golden-sand hover:text-dark-green transition-all shadow-sm">
+                        <i class="fa-brands fa-linkedin-in text-xl"></i>
+                    </a>
                 </div>
             </div>
-        </div>
 
-        <!-- Textos inferiores fuera de la tarjeta -->
-        <div class="poster-footer">
-            <div class="footer-left">
-                Promoción boda<br>
-                <span class="footer-light">Enero 2035</span>
+            <!-- Copyright and Signature -->
+            <div class="pt-8 relative border-t border-peach/10">
+                <h4 class="font-serif text-[2.2rem] font-medium mb-4 text-golden-sand">Maricela Ávila</h4>
+                <p class="text-[11px] font-sans font-light text-peach/50 tracking-widest uppercase leading-relaxed">
+                    © 2027 | Todos los derechos reservados
+                </p>
             </div>
-            <div class="footer-right">
-                Silvana Ochoa Fotografía<br>
-                <span class="footer-light">@sitioincreible</span>
-            </div>
-        </div>
-    </div>
+        </footer>
+
+    </main>
+
 </body>
-</html>
+                        </html>
