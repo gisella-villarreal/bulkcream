@@ -131,35 +131,38 @@
         </section>
 
         <!-- SECCIÓN SOBRE MÍ / CONOCE BULKCREAM -->
-        <section class="mt-8 mb-6 mx-4 bg-zinc-950 text-brand-text px-6 pt-10 pb-12 relative z-10 rounded-[2.5rem] border border-zinc-900 shadow-xl">
+        <section class="mt-8 mb-6 mx-4 bg-zinc-950 text-brand-text relative z-10 rounded-[2.5rem] border border-zinc-900 shadow-xl overflow-hidden">
             
-            <div class="flex flex-col items-center text-center mb-6">
-                <!-- Imagen transparente más grande y sin el aro -->
-                <div class="relative mb-6 mt-2 flex items-center justify-center">
-                    <img src="1793557653772.jpg" alt="Conoce Bulkcream" class="w-48 object-contain drop-shadow-2xl">
-                </div>
+            <!-- Imagen de ancho completo tipo banner -->
+            <div class="w-full h-44 md:h-52 relative border-b border-zinc-800">
+                <img src="1793557653772.jpg" alt="Conoce Bulkcream" class="w-full h-full object-cover">
+                <!-- Sutil gradiente oscuro en la parte inferior de la foto para transición -->
+                <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-zinc-950 to-transparent"></div>
+            </div>
+            
+            <div class="px-6 pt-6 pb-12 flex flex-col items-center text-center">
                 
                 <h2 class="font-impact text-3xl font-black text-brand-yellow mb-4 uppercase tracking-tight">CONOCE BULKCREAM</h2>
                 
                 <p class="font-sans text-[15px] font-semibold leading-relaxed text-brand-text mb-3">
                     Tu esfuerzo merece una buena base.
                 </p>
-                <p class="font-sans text-[13.5px] font-light leading-relaxed text-zinc-300">
+                <p class="font-sans text-[13.5px] font-light leading-relaxed text-zinc-300 mb-6">
                     Creemos en la constancia, la alimentación y los pequeños hábitos que acompañan tus grandes objetivos.<br><br>
                     Practicidad para tu rutina. Versatilidad para tu cocina. Carbohidratos para acompañar tus metas.
                 </p>
+                
+                <!-- BOTÓN DE WHATSAPP CHANNEL -->
+                <a href="https://whatsapp.com/channel/0029VbEMikfEgGfGzrvqju05" 
+                   target="_blank"
+                   class="inline-flex justify-center items-center w-full gap-2 px-6 py-4 rounded-xl bg-brand-yellow hover:bg-brand-yellow-hover transition-colors text-brand-black text-sm font-extrabold tracking-wider text-center shadow-yellow-glow uppercase">
+                    Únete a BULK CREAM Nation <i class="fa-brands fa-whatsapp text-lg ml-1"></i>
+                </a>
+                
+                <p class="text-center text-[10px] md:text-[11px] font-extrabold mt-5 text-brand-yellow uppercase tracking-widest">
+                    Energía Natural · Alto Rendimiento · Preparación Rápida
+                </p>
             </div>
-            
-            <!-- BOTÓN DE WHATSAPP CHANNEL -->
-            <a href="https://whatsapp.com/channel/0029VbEMikfEgGfGzrvqju05" 
-               target="_blank"
-               class="inline-flex justify-center items-center w-full gap-2 px-6 py-4 rounded-xl bg-brand-yellow hover:bg-brand-yellow-hover transition-colors text-brand-black text-sm font-extrabold tracking-wider text-center shadow-yellow-glow uppercase">
-                Únete a BULK CREAM Nation <i class="fa-brands fa-whatsapp text-lg ml-1"></i>
-            </a>
-            
-            <p class="text-center text-[10px] md:text-[11px] font-extrabold mt-5 text-brand-yellow uppercase tracking-widest">
-                Energía Natural · Alto Rendimiento · Preparación Rápida
-            </p>
         </section>
 
         <!-- FOOTER / CONTACTO -->
@@ -188,5 +191,4 @@
     </main>
 
 </body>
-                </html>
-                
+</html>
