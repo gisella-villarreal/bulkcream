@@ -134,9 +134,12 @@
         <section class="mt-8 mb-6 mx-4 bg-zinc-950 text-brand-text px-6 pt-10 pb-12 relative z-10 rounded-[2.5rem] border border-zinc-900 shadow-xl">
             
             <div class="flex flex-col items-center text-center mb-6">
-                <!-- Foto de perfil -->
-                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-brand-yellow/60 shadow-yellow-glow mb-4 bg-zinc-900 flex items-center justify-center">
-                    <img src="1000227131.png" alt="Conoce Bulkcream" class="w-full h-full object-cover">
+                <!-- Contenedor ajustado para que la imagen sobresalga -->
+                <div class="relative w-24 h-24 mb-8 mt-2 flex items-center justify-center">
+                    <!-- Aro amarillo de fondo -->
+                    <div class="absolute inset-0 rounded-full border-2 border-brand-yellow/60 shadow-yellow-glow bg-zinc-900"></div>
+                    <!-- Imagen transparente más grande sobresaliendo -->
+                    <img src="1000227131.png" alt="Conoce Bulkcream" class="relative z-10 w-36 max-w-none object-contain drop-shadow-2xl">
                 </div>
                 
                 <h2 class="font-impact text-3xl font-black text-brand-yellow mb-4 uppercase tracking-tight">CONOCE BULKCREAM</h2>
