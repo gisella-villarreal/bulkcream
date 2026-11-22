@@ -72,25 +72,57 @@
         </nav>
 
         <!-- HEADER / INICIO -->
-        <header id="inicio" class="relative w-full h-[580px] md:h-[680px] lg:h-[740px] flex flex-col justify-end text-center pb-8 md:pb-16 pt-4 md:pt-20">
-            <div class="absolute inset-0 z-0 overflow-hidden bg-brand-black">
-                <img src="1793310176030.jpg" alt="Portada Bulkcream" class="w-full h-full object-cover object-[center_85%] md:object-center scale-100">
+        <header id="inicio" class="relative w-full h-[580px] md:h-auto md:min-h-[640px] flex flex-col justify-end md:justify-center text-center md:text-left pb-8 pt-4 md:pt-28 md:pb-16 overflow-hidden">
+            
+            <!-- FONDO EXCLUSIVO PARA CELULAR (intacto) -->
+            <div class="md:hidden absolute inset-0 z-0 overflow-hidden bg-brand-black">
+                <img src="1793310176030.jpg" alt="Portada Bulkcream" class="w-full h-full object-cover object-[center_85%] scale-100">
             </div>
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-black via-brand-black/90 to-transparent z-10 h-[45%] md:h-[55%]"></div>
+            <div class="md:hidden absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-black via-brand-black/90 to-transparent z-10 h-[45%]"></div>
 
-            <div class="relative z-20 px-5 md:px-8 mt-auto md:max-w-4xl md:mx-auto">
-                <h1 class="font-impact text-4xl md:text-6xl lg:text-7xl font-black leading-none mb-2 md:mb-3 text-brand-text tracking-tighter uppercase drop-shadow-[0_3px_5px_rgba(0,0,0,1)]">
-                    BULKCREAM
-                </h1>
-                <p class="font-impact text-sm md:text-lg lg:text-xl tracking-widest font-extrabold text-brand-yellow uppercase mb-2 md:mb-4 drop-shadow-[0_3px_5px_rgba(0,0,0,1)]">
-                    PREMIUM CARBS FOR MASSIVE GAINS
-                </p>
-                <p class="font-sans text-xs md:text-base font-medium text-brand-text/90 max-w-[320px] md:max-w-xl mx-auto mb-1 md:mb-2 leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
-                    Nutrición para un mejor rendimiento.
-                </p>
-                <p class="font-sans text-[11px] md:text-sm font-light text-zinc-300 max-w-[290px] md:max-w-lg mx-auto leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
-                    Crema de arroz para acompañar tu rutina, tus entrenamientos y tus recetas favoritas.
-                </p>
+            <!-- FONDO AMBIENTAL SUTIL PARA COMPUTADOR -->
+            <div class="hidden md:block absolute inset-0 z-0 overflow-hidden bg-brand-black">
+                <img src="1793310176030.jpg" alt="" aria-hidden="true" class="w-full h-full object-cover object-center opacity-20 blur-2xl scale-110">
+                <div class="absolute inset-0 bg-gradient-to-b from-brand-black/70 via-brand-black/60 to-brand-black"></div>
+            </div>
+
+            <!-- CONTENEDOR PRINCIPAL DEL HERO -->
+            <div class="relative z-20 w-full mt-auto md:mt-0 md:max-w-5xl md:mx-auto md:px-8 md:grid md:grid-cols-12 md:gap-10 md:items-center">
+                
+                <!-- Columna de texto (en celular va abajo centrado; en PC va a la izquierda) -->
+                <div class="px-5 md:px-0 md:col-span-7">
+                    <h1 class="font-impact text-4xl md:text-6xl lg:text-7xl font-black leading-none mb-2 md:mb-4 text-brand-text tracking-tighter uppercase drop-shadow-[0_3px_5px_rgba(0,0,0,1)]">
+                        BULKCREAM
+                    </h1>
+                    <p class="font-impact text-sm md:text-lg lg:text-xl tracking-widest font-extrabold text-brand-yellow uppercase mb-2 md:mb-5 drop-shadow-[0_3px_5px_rgba(0,0,0,1)]">
+                        PREMIUM CARBS FOR MASSIVE GAINS
+                    </p>
+                    <p class="font-sans text-xs md:text-lg font-medium text-brand-text/90 max-w-[320px] md:max-w-xl mx-auto md:mx-0 mb-1 md:mb-3 leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
+                        Nutrición para un mejor rendimiento.
+                    </p>
+                    <p class="font-sans text-[11px] md:text-base font-light text-zinc-300 max-w-[290px] md:max-w-lg mx-auto md:mx-0 leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
+                        Crema de arroz para acompañar tu rutina, tus entrenamientos y tus recetas favoritas.
+                    </p>
+
+                    <!-- Botón rápido visible solo en computador -->
+                    <div class="hidden md:flex items-center gap-4 mt-8">
+                        <a href="#productos" class="bg-brand-yellow hover:bg-brand-yellow-hover text-brand-black font-impact font-black text-sm uppercase tracking-wider px-7 py-3.5 rounded-xl shadow-yellow-glow hover:shadow-yellow-glow-lg transition-all">
+                            Ver Sabores
+                        </a>
+                        <a href="#conoce" class="border border-zinc-700 hover:border-brand-yellow text-brand-text hover:text-brand-yellow font-sans font-semibold text-sm px-6 py-3.5 rounded-xl transition-colors">
+                            Conoce más
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Imagen vertical encuadrada EXCLUSIVA PARA COMPUTADOR (sin recortes bruscos) -->
+                <div class="hidden md:flex md:col-span-5 justify-end">
+                    <div class="relative w-full max-w-[360px] aspect-[3/4] rounded-3xl overflow-hidden border border-brand-yellow/40 shadow-yellow-glow-lg bg-zinc-950">
+                        <img src="1793310176030.jpg" alt="Portada Bulkcream" class="w-full h-full object-cover object-[center_85%]">
+                        <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-brand-black/60 to-transparent"></div>
+                    </div>
+                </div>
+
             </div>
         </header>
 
